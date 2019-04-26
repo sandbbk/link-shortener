@@ -104,11 +104,7 @@ def process(request):
         user = request.user
         user = None if user.is_anonymous else user
         link = request.POST['link']
-        try:
-            response = requests.get(link)
-            if response.status_code != 200:
-                raise requests.ConnectionError
-        except (requests.exceptions.MissingSchema, requests.ConnectionError):
+        if not link.startswith(('http://', 'https://')):
             return JsonResponse({'response': 'Link is not valid!', 'result': 'success'})
         native, created = NativeLink.objects.get_or_create(nativelink=link)
         x = True
@@ -152,7 +148,7 @@ def stat(request):
     user = request.user
     if user.is_anonymous:
         return render(request, 'short/message.html', {'msg': 'Please, sign in!'})
-    links = Link.objects.all().select_related('nativelink')
+    links = Link.objects.all().select_related('nativelink').order_by('short_link')
     pages = Paginator(links, 30)
     num_page = request.GET.get('page')
     try:
