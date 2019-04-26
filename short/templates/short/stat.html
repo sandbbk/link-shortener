@@ -1,0 +1,51 @@
+{% extends 'short/main.html' %}
+
+    {% block main %}
+       <table>
+                 <tr>
+                     <th>Short link</th>
+                     <th>Native link</th>
+                     <th>follows</th>
+                </tr>
+        {% for one in links %}
+                <tr>
+                    <td><a href="{{ one.short_link }}">{{ one.short_link }}</a></td>
+                    <td><a href="{{ one.nativelink.nativelink }}">{{ one.nativelink.nativelink }}</a></td>
+                    <td>{{ one.follow }}</td>
+                </tr>
+
+        {% endfor %}
+
+    </table>
+    <div class="paginator">
+               {% if links.has_previous %}
+                <span class="active">
+                    <a href="?page={{links.previous_page_number}}">&laquo;</a>
+                </span>
+                {% else %}
+                    <span class="unactive">
+                        <a href="">&laquo;</a>
+                    </span>
+                {% endif %}
+                {% for num in p_list %}
+                    {% if num == links.number %}
+                        <span class="this">
+                            <a href="?page={{num}}">{{num}}</a>
+                        </span>
+                    {% else %}
+                        <span>
+                            <a href="?page={{num}}">{{num}}</a>
+                        </span>
+                    {% endif %}
+                {% endfor %}
+                {% if links.has_next %}
+                <span class="active">
+                    <a href="?page={{links.next_page_number}}">&raquo;</a>
+                </span>
+                 {% else %}
+                    <span class="unactive">
+                        <a href="">&raquo;</a>
+                    </span>
+                {% endif %}
+    </div>
+    {% endblock %}

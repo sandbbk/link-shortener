@@ -1,0 +1,18 @@
+{% extends 'short/main.html'%}
+
+
+{% block main %}
+<div>
+    <form method = "POST" class = "form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type = "submit" class = "save btn btn-default">Sign in</button>
+        <div class="msg">
+        {% if msg %}
+            {{msg}}
+        {% endif %}
+    </div>
+        <p> or click <a href="{% url 'signup' %}">sign up</a> to create user.</p>
+    </form>
+
+</div>
+{% endblock %}

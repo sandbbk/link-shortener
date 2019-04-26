@@ -1,0 +1,193 @@
+html, body {
+height: 100%;
+}
+
+h1 a {
+color : #f1CC09;
+font-family: arial;
+text-decoration: none;
+}
+
+body {
+position: relative;
+padding-left: 15px;
+padding-right: 25px;
+margin-bottom: 0px;
+}
+
+.page-header {
+background-color: grey;
+
+padding: 20px 20px 20px 40px;
+border-radius: 10px;
+border-spacing: 0;
+}
+.name {
+width: 250px;
+}
+
+.page-header div {
+display: inline-block;
+}
+
+.page-header div div {
+display: block;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visisted, page-header h1 a:active {
+color: #f1CC09;
+font-size: 36pt;
+text-decoration: none;
+}
+
+.login {
+position: relative;
+border: 1px double white;
+margin-left: 30px;
+padding: 10px;
+border-radius: 10px;
+
+}
+
+a {
+color: #332291;
+font-family: arial;
+text-decoration: none;
+}
+
+.main a:visited {
+color: #332291;
+}
+
+a:hover:before {
+opacity:1;
+}
+
+a:hover {
+color: #44ee67;
+-webkit-transition: opacity 1s linear;
+-o-transition: opacity 1s linear;
+-moz-transition: opacity 1s linear;
+transition: opacity 1s linear;
+}
+
+.main {
+padding: 10px 10px 10px 10px;
+background: #F8E391;
+margin-bottom: 0px;
+min-height: 100%;
+height: auto;
+border-radius: 10px;
+
+}
+
+.main div {
+display: block;
+}
+
+.inp {
+width: 500px;
+margin-left: 20%;
+
+}
+
+.msg {
+color: red;
+}
+
+table {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+border-radius: 10px;
+border-spacing: 0;
+text-align: center;
+width: 100%;
+}
+
+th {
+background: #BCEBDD;
+color: white;
+text-shadow: 0 1px 1px #2D2020;
+padding: 10px 20px;
+}
+
+th, td {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: white;
+}
+
+th:first-child, td:first-child {
+text-align: left;
+}
+
+th:first-child {
+border-top-left-radius: 10px;
+}
+
+th:last-child {
+border-top-right-radius: 10px;
+border-right: none;
+}
+
+td {
+padding: 10px 20px;
+background: #F8E391;
+}
+
+tr:last-child td:first-child {
+border-radius: 0 0 0 10px;
+}
+
+tr:last-child td:last-child {
+border-bottom-right-radius: 10px;
+}
+
+tr td:last-child {
+border-right: none;
+}
+
+.paginator {
+position: relative;
+display: inline-block;
+bottom: 0px;
+
+}
+
+.paginator span {
+margin: 3px;
+padding: 2px 5px 2px 5px;
+}
+
+.paginator span.this {
+background: #7fc2dc;
+padding: 2px 5px 2px 5px;
+border-radius: 5px;
+}
+
+.paginator span a {
+color: #009977;
+text-align: center;
+}
+
+.paginator span.unactive {
+pointer-events: none;
+}
+
+.footer {
+position: relative;
+height: 50px;
+margin-bottom: 0;
+background: grey;
+display: block;
+border-radius: 10px;
+border-spacing: 0;
+
+}
+
+.footer div {
+display: inline-block;
+margin-left: 15px;
+font-family: arial;
+color: #ffeebb;
+}
