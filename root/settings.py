@@ -25,7 +25,7 @@ SECRET_KEY = '%xq*y53&aif-_x@qatc@5zbqe(9kd75_(zxh^$_5punwf!)caw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['sandbbk.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'sandbbk.pythonanywhere.com']
 
 
 # Application definition
@@ -129,5 +129,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'short/static')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'short/static/img')
+
