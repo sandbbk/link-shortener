@@ -1,9 +1,9 @@
-from django.shortcuts import (redirect, render)
+from django.shortcuts import (redirect, render, get_object_or_404)
 from django.contrib.auth import (authenticate, login, logout)
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import User_Creation_Form
 import hashlib
-import requests
+from django.http import Http404
 from django.http import JsonResponse
 from short.extentions import (send_mail, encode_index, num)
 from datetime import timedelta
@@ -128,7 +128,7 @@ def follow(request, link):
         link.save()
         return redirect(link.nativelink.nativelink)
     except ObjectDoesNotExist:
-        return render(request, 'short/message.html', {'msg': 'Your link is not valid!'})
+        raise Http404("Not found")
 
 
 def p_range(pages, num_page):   # returns  convenient list of page-numbers;
