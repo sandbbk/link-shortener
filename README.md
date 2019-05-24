@@ -5,7 +5,7 @@ Description
   Simple link shortener on main page receives a link like 
   *https://some-name.some-domain/some-path...some-path* 
   and returnes a short one like 
-  [https://sandbbk.pythonanywhere.com/Wor7nb32](https://sandbbk.pythonanywhere.coom/Wor7nb32)
+  [https://sandbbk.pythonanywhere.com/6u6HUa9W](https://sandbbk.pythonanywhere.com/6u6HUa9W)
   You can authenticate yourself to watch statistics about links created by You.
   
   Install and launch!
